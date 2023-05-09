@@ -1,13 +1,13 @@
 <?php
 function connect_db()
 {
-    // $user = "root";
-    // $pass = "";
-    // $host = "127.0.0.1";
-    $user = "usvg4vh5klwg1djt";
-    $pass = "h1O9o9iDqjyHjDlxw50o";
-    $dbname = "busgmq1633lfbaqrmrps";
-    $host = "busgmq1633lfbaqrmrps-mysql.services.clever-cloud.com";
+    $user = "root";
+    $pass = "";
+    $host = "127.0.0.1";
+    // $user = "usvg4vh5klwg1djt";
+    // $pass = "h1O9o9iDqjyHjDlxw50o";
+    // $host = "busgmq1633lfbaqrmrps-mysql.services.clever-cloud.com";
+    $dbname = "compagnie_assurence";
     $dsn = 'mysql:host=' . $host . ';dbname=' . $dbname;
     try {
         $conn = new PDO($dsn, $user, $pass);
