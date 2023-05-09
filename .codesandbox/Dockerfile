@@ -2,6 +2,8 @@ FROM php:8.1.17-apache-bullseye
 
 RUN apt-get update && apt-get install -y --no-install-recommends git
 
+RUN apt-get install php-mysql
+
 # Install PHP & Composer
 RUN apt update -y && DEBIAN_FRONTEND=noninteractive apt install -y curl git unzip && \
   cd ~ && \

@@ -12,6 +12,8 @@ switch ($uri) {
         break;
     case "/create":
         include_once "./view/coducteur.php";
+        require "./models/conducteurModel.php";
+        create_table_conducteur();
         $title = form_create()[0];
         $content = form_create()[1];
         include_once "./template/template.php";
