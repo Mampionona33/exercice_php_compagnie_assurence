@@ -10,7 +10,8 @@ function create_table_conducteur()
     nom VARCHAR(30) NOT NULL,
     prenom VARCHAR(30) NOT NULL,
     date_naissance DATE,
-    annee_obt_permis INT(4) UNSIGNED,
+    annee_adhesion DATE,
+    annee_obt_permis DATE,
     nbr_acc INT(2) UNSIGNED,
     id_tarif INT(6) UNSIGNED );";
 

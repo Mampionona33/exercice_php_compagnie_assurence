@@ -1,0 +1,6 @@
+RewriteEngine On
+RewriteBase /exercice_php_compagnie_assurence/
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ index.php [L]

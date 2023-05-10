@@ -4,9 +4,12 @@ ini_set('display_errors', '1');
 $uri = parse_url($_SERVER["REQUEST_URI"], PHP_URL_PATH);
 require "./models/conducteurModel.php";
 require "./models/tarifModel.php";
+require "./controller/conducteur_controller.php";
+
 create_table_conducteur();
 create_table_tarif();
 populate_tarif();
+
 
 switch ($uri) {
     case "/":
@@ -20,7 +23,7 @@ switch ($uri) {
         break;
     case "/create":
         if ($_POST) {
-            var_dump($_POST);
+            execut_create_conducteur($_POST);
         }
         include_once "./view/coducteur.php";
         $title = form_create()[0];
