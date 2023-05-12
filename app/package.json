@@ -1,0 +1,45 @@
+{
+  "name": "exercice_php_compagnie_assurence",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "webpack --watch",
+    "build": "webpack --mode=production --node-env=production",
+    "build:dev": "webpack --mode=development",
+    "build:prod": "webpack --mode=production --node-env=production",
+    "watch": "webpack --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Mampionona33/exercice_php_compagnie_assurence.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Mampionona33/exercice_php_compagnie_assurence/issues"
+  },
+  "homepage": "https://github.com/Mampionona33/exercice_php_compagnie_assurence#readme",
+  "devDependencies": {
+    "@babel/core": "^7.21.4",
+    "@babel/preset-env": "^7.21.4",
+    "@webpack-cli/generators": "^3.0.2",
+    "autoprefixer": "^10.4.14",
+    "babel-loader": "^9.1.2",
+    "css-loader": "^6.7.3",
+    "mini-css-extract-plugin": "^2.7.5",
+    "sass": "^1.62.0",
+    "sass-loader": "^13.2.2",
+    "style-loader": "^3.3.2",
+    "webpack": "^5.80.0",
+    "webpack-cli": "^5.0.2"
+  },
+  "dependencies": {
+    "material-icons": "^1.13.6",
+    "node-sass": "^8.0.0",
+    "postcss-loader": "^7.2.4",
+    "sweetalert2": "^11.7.3"
+  }
+}
