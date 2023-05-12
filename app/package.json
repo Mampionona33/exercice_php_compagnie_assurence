@@ -43,6 +43,7 @@
   "dependencies": {
     "material-icons": "^1.13.6",
     "node-sass": "^8.0.0",
+    "roboto-font": "^0.1.0",
     "sweetalert2": "^11.7.3"
   }
 }

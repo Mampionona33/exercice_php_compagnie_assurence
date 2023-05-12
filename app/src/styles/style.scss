@@ -1,5 +1,25 @@
+@import "./navBar.scss";
+@import "~roboto-font/css/fonts.css";
+
+* {
+  font-family: "Roboto", sans-serif;
+}
 body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+.btn {
+  background-color: blue;
+  padding: 0.2rem 0.5rem;
+  text-transform: uppercase;
+  color: #fff;
+  border-radius: 5px;
+  margin: 0.5rem;
 }
