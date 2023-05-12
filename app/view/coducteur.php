@@ -51,9 +51,15 @@ function home_page($conducteurs)
     $title = "Home";
     $content = '<div>';
     $content .= '<h1>Liste des conducteurs</h1>';
+    $content .= '<div class="table_container" >';
+    $content .= '<div >';
 
     if (empty($conducteurs)) {
-        $content .= '<p>No data</p>';
+        $content .= '<table>';
+        $content .= '<tr>';
+        $content .= '<td colspan="7">No data</td>';
+        $content .= '</tr>';
+        $content .= '</table>';
     } else {
         $content .= '<table>';
         $content .= '<thead>';
@@ -85,6 +91,8 @@ function home_page($conducteurs)
         $content .= '</table>';
     }
 
+    $content .= '</div>';
+    $content .= '</div>';
     $content .= '</div>';
 
     return [$title, $content];
