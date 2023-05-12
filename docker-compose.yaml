@@ -20,6 +20,10 @@ services:
       - /var/tmp:/var/tmp
       - /var/lib/php/sessions:/var/lib/php/sessions
     user: $UID
+    environment:
+        PMA_HOST: mysql
+        PMA_PORT: 3306
+        MYSQL_ROOT_PASSWORD: password
 
   mysql:
     image: mysql:latest

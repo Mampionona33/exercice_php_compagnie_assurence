@@ -6,14 +6,13 @@ require "./models/conducteurModel.php";
 require "./models/tarifModel.php";
 require "./controller/conducteur_controller.php";
 
-// create_table_conducteur();
-// create_table_tarif();
-// populate_tarif();
+create_table_conducteur();
+create_table_tarif();
+populate_tarif();
 
 
 switch ($uri) {
     case "/":
-        var_dump($uri);
         include_once "./view/coducteur.php";
         $title = home_page()[0];
         $content = home_page()[1];
@@ -24,14 +23,13 @@ switch ($uri) {
         phpinfo();
         break;
     case "/create":
-        var_dump($uri);
-        // if ($_POST) {
-        //     execut_create_conducteur($_POST);
-        // }
-        // include_once "./view/coducteur.php";
-        // $title = form_create()[0];
-        // $content = form_create()[1];
-        // include_once "./template/template.php";
+        if ($_POST) {
+            execut_create_conducteur($_POST);
+        }
+        include_once "./view/coducteur.php";
+        $title = form_create()[0];
+        $content = form_create()[1];
+        include_once "./template/template.php";
         break;
     default:
         echo "404 not found";

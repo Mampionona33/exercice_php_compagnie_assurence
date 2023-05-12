@@ -4,6 +4,10 @@ FROM php:8.1.17-apache-bullseye
 # Installez les packages nécessaires
 RUN apt update -y && apt install -y htop
 
+# Install default-mysql-client
+RUN apt-get update
+RUN apt-get install -y default-mysql-client
+
 # Install phpMyAdmin
 ENV PHPMYADMIN_VERSION=5.1.1
 RUN curl -L -o phpmyadmin.tar.gz https://files.phpmyadmin.net/phpMyAdmin/$PHPMYADMIN_VERSION/phpMyAdmin-$PHPMYADMIN_VERSION-all-languages.tar.gz \

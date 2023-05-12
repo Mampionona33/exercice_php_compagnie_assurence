@@ -3,8 +3,8 @@ function connect_db()
 {
     $user = "root";
     $pass = "password";
-    $host = "192.168.48.3";
-    $dbname = "compagnie_assurence";
+    $host = "mysql";
+    $dbname = "compagnie_assurance";
 
     $dsn = 'mysql:host=' . $host . ';dbname=' . $dbname;
     try {
