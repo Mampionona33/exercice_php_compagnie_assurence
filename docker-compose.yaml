@@ -6,7 +6,7 @@ services:
       context: .
       dockerfile: Dockerfile
     ports:
-      - 8081:80
+      - 8081:80/tcp
     volumes:
       - ./app:/var/www/html/app
       - ./apache-config.conf:/etc/apache2/conf-enabled/apache-config.conf:ro
@@ -21,23 +21,23 @@ services:
       - /var/lib/php/sessions:/var/lib/php/sessions
     user: $UID
     environment:
-        PMA_HOST: mysql
-        PMA_PORT: 3306
-        MYSQL_ROOT_PASSWORD: password
+      PMA_HOST: mysql
+      PMA_PORT: 3306
+      MYSQL_ROOT_PASSWORD: password
 
   mysql:
     image: mysql:latest
     ports:
-      - 3307:3306
+      - 3307:3306/tcp
     environment:
       - MYSQL_ROOT_PASSWORD=password
-      - MYSQL_DATABASE=compagnie_assurance
+      - MYSQL_DATABASE=compagnie_assurence
 
   phpmyadmin:
     image: phpmyadmin/phpmyadmin
     ports:
       - 8888:80
     environment:
-        PMA_HOST: mysql
-        PMA_PORT: 3306
-        MYSQL_ROOT_PASSWORD: password
+      PMA_HOST: mysql
+      PMA_PORT: 3306
+      MYSQL_ROOT_PASSWORD: password
