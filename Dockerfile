@@ -10,6 +10,17 @@ RUN curl -L -o phpmyadmin.tar.gz https://files.phpmyadmin.net/phpMyAdmin/$PHPMYA
     && tar -xzf phpmyadmin.tar.gz -C /var/www/html --strip-components=1 \
     && rm phpmyadmin.tar.gz
 
+# Set phpMyAdmin configuration
+RUN { \
+    echo '<?php'; \
+    echo '$_ENV["PMA_HOST"] = "mysql";'; \
+    echo '$_ENV["PMA_PORT"] = "3306";'; \
+    echo '$_ENV["PMA_USER"] = "root";'; \
+    echo '$_ENV["PMA_PASSWORD"] = "password";'; \
+    echo '$_ENV["PMA_AUTH_TYPE"] = "config";'; \
+    echo '$_ENV["PMA_ABSOLUTE_URI"] = "/phpmyadmin/";'; \
+    } > /var/www/html/config.inc.php
+
 # Enable mod_rewrite
 RUN a2enmod rewrite
 
