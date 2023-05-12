@@ -23,8 +23,9 @@ switch ($uri) {
         phpinfo();
         break;
     case "/create":
-        if ($_POST) {
-            execut_create_conducteur($_POST);
+        if (isset($_POST) && isset($_POST["date_naissance"])) {
+            $message = execut_create_conducteur($_POST);
+            header("Refresh:4; url=/create");
         }
         include_once "./view/coducteur.php";
         $title = form_create()[0];

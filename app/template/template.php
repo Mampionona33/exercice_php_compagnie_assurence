@@ -12,6 +12,7 @@
 
 <body>
     <?php include_once "navBar.php" ?>
+    <?php echo isset($message) ? $message : ""; ?>
     <?php echo $content; ?>
     <script src="../dist/app-bundle.js"></script>
 </body>
