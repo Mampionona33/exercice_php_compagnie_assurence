@@ -23,23 +23,26 @@
   },
   "homepage": "https://github.com/Mampionona33/exercice_php_compagnie_assurence#readme",
   "devDependencies": {
-    "@babel/core": "^7.21.4",
-    "@babel/preset-env": "^7.21.4",
+    "@babel/core": "^7.21.8",
+    "@babel/preset-env": "^7.21.5",
     "@webpack-cli/generators": "^3.0.2",
     "autoprefixer": "^10.4.14",
     "babel-loader": "^9.1.2",
     "css-loader": "^6.7.3",
     "mini-css-extract-plugin": "^2.7.5",
-    "sass": "^1.62.0",
+    "postcss": "^8.4.23",
+    "postcss-loader": "^7.3.0",
+    "prettier": "^2.8.8",
+    "sass": "^1.62.1",
     "sass-loader": "^13.2.2",
     "style-loader": "^3.3.2",
-    "webpack": "^5.80.0",
-    "webpack-cli": "^5.0.2"
+    "webpack": "^5.82.1",
+    "webpack-cli": "^5.1.1",
+    "workbox-webpack-plugin": "^6.5.4"
   },
   "dependencies": {
     "material-icons": "^1.13.6",
     "node-sass": "^8.0.0",
-    "postcss-loader": "^7.2.4",
     "sweetalert2": "^11.7.3"
   }
 }
