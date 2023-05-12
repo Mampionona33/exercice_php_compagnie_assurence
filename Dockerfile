@@ -1,12 +1,12 @@
-# Utilisez une image basée sur php avec Apache
-FROM php:8.1.17-apache-bullseye
+# Utilisez une image basée sur php avec Apache plus légère
+FROM php:8.1-apache-bullseye
  
 # Installez les packages nécessaires
-RUN apt update -y && apt install -y htop
-
-# Install default-mysql-client
-RUN apt-get update
-RUN apt-get install -y default-mysql-client
+RUN apt-get update \
+    && apt-get install -y --no-install-recommends \
+        htop \
+        default-mysql-client \
+    && rm -rf /var/lib/apt/lists/*
 
 # Install phpMyAdmin
 ENV PHPMYADMIN_VERSION=5.1.1

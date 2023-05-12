@@ -70,10 +70,10 @@ function home_controller()
 
     // Vérifier si la liste des conducteurs est vide
     if (empty($conducteurs)) {
-        $view_data = home_page("No data"); 
+        $view_data = home_page([]);
     } else {
-        $view_data = home_page($conducteurs); 
+        $view_data = home_page($conducteurs);
     }
-    
+
     return $view_data;
 }

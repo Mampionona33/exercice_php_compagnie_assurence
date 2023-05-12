@@ -89,4 +89,3 @@ function home_page($conducteurs)
 
     return [$title, $content];
 }
-
