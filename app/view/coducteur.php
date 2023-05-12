@@ -46,12 +46,47 @@ function form_create()
     return [$title, $content];
 }
 
-function home_page()
+function home_page($conducteurs)
 {
-    $title = "Add driver";
+    $title = "Home";
     $content = '<div>';
-    $content .= '<p>Home</p>';
+    $content .= '<h1>Liste des conducteurs</h1>';
+
+    if (empty($conducteurs)) {
+        $content .= '<p>No data</p>';
+    } else {
+        $content .= '<table>';
+        $content .= '<thead>';
+        $content .= '<tr>';
+        $content .= '<th>Nom</th>';
+        $content .= '<th>Prénom</th>';
+        $content .= '<th>Date de naissance</th>';
+        $content .= '<th>Année d\'obtention du permis</th>';
+        $content .= '<th>Année d\'adhésion</th>';
+        $content .= '<th>Nombre d\'accidents</th>';
+        $content .= '<th>Tarif</th>';
+        $content .= '</tr>';
+        $content .= '</thead>';
+        $content .= '<tbody>';
+
+        foreach ($conducteurs as $conducteur) {
+            $content .= '<tr>';
+            $content .= '<td>' . $conducteur['nom'] . '</td>';
+            $content .= '<td>' . $conducteur['prenom'] . '</td>';
+            $content .= '<td>' . $conducteur['date_naissance'] . '</td>';
+            $content .= '<td>' . $conducteur['annee_obt_permis'] . '</td>';
+            $content .= '<td>' . $conducteur['annee_adhesion'] . '</td>';
+            $content .= '<td>' . $conducteur['nbr_acc'] . '</td>';
+            $content .= '<td>' . $conducteur['couleur_tarif'] . '</td>';
+            $content .= '</tr>';
+        }
+
+        $content .= '</tbody>';
+        $content .= '</table>';
+    }
+
     $content .= '</div>';
 
     return [$title, $content];
 }
+

@@ -14,8 +14,8 @@ populate_tarif();
 switch ($uri) {
     case "/":
         include_once "./view/coducteur.php";
-        $title = home_page()[0];
-        $content = home_page()[1];
+        $title = home_controller()[0];
+        $content = home_controller()[1];
         include_once "./template/template.php";
         
         break;
@@ -25,7 +25,7 @@ switch ($uri) {
     case "/create":
         if (isset($_POST) && isset($_POST["date_naissance"])) {
             $message = execut_create_conducteur($_POST);
-            header("Refresh:4; url=/create");
+            header("Refresh:4; url=/"); // Redirect to home page
         }
         include_once "./view/coducteur.php";
         $title = form_create()[0];

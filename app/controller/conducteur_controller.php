@@ -54,3 +54,18 @@ function execut_create_conducteur($conducteur)
         return "Erreur lors de l'enregistrement du conducteur.";
     }
 }
+
+function home_controller()
+{
+    // Récupérer la liste des conducteurs depuis le modèle
+    $conducteurs = get_conducteurs();
+
+    // Vérifier si la liste des conducteurs est vide
+    if (empty($conducteurs)) {
+        $view_data = home_page("No data"); 
+    } else {
+        $view_data = home_page($conducteurs); 
+    }
+    
+    return $view_data;
+}

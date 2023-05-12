@@ -37,4 +37,22 @@ function save_conducteur($conducteur, $tarif)
     return true;
 }
 
-// Autres fonctions du modèle...
+
+function get_conducteurs()
+{
+    $db = connect_db(); 
+    $query = "SELECT conducteurs.*, tarifs.code_couleur AS couleur_tarif 
+              FROM conducteurs
+              JOIN tarifs ON conducteurs.id_tarif = tarifs.id_tarif";
+
+    $stmt = $db->prepare($query);
+    $stmt->execute();
+
+    return $stmt->fetchAll(PDO::FETCH_ASSOC);
+}
+
+
+
+
+
+
