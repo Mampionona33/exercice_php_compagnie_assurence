@@ -36,8 +36,8 @@ function form_create()
     $content .= '</div>';
 
     $content .= '<div>';
-    $content .= '<input type="reset" value="Recommencer">';
-    $content .= '<input type="submit" value="Enregistrer">';
+    $content .= '<input class="btn secondary" type="reset" value="Recommencer">';
+    $content .= '<input class="btn" type="submit" value="Enregistrer">';
     $content .= '</div>';
 
     $content .= '</form>';

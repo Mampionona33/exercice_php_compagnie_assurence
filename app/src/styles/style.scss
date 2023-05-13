@@ -1,6 +1,8 @@
 @import "./navBar.scss";
 @import "~roboto-font/css/fonts.css";
 @import "./table.scss";
+@import "./library";
+@import "./create";
 
 * {
   font-family: "Roboto", sans-serif;
@@ -21,6 +23,7 @@ a {
   justify-content: center;
   align-items: center;
   margin: 1rem;
+  min-height: 85vh;
 }
 
 .form_container {
@@ -31,11 +34,27 @@ a {
   border-radius: 5px;
 }
 
+
 .btn {
-  background-color: blue;
   padding: 0.2rem 0.5rem;
   text-transform: uppercase;
-  color: #fff;
   border-radius: 5px;
   margin: 0.5rem;
+  background-color: $bleu ;
+  color: #fff;
+}
+
+.secondary{
+  color: #fff;
+  background-color: $grey ;
+};
+.primary{
+  color: #fff;
+  background-color: $bleu ;
+}
+input[type=submit],input[type=reset]{
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+
 }
