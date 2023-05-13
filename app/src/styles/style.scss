@@ -16,6 +16,21 @@ a {
   color: #000;
 }
 
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem;
+}
+
+.form_container {
+  display: flex;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  padding: 1rem;
+  border-radius: 5px;
+}
+
 .btn {
   background-color: blue;
   padding: 0.2rem 0.5rem;

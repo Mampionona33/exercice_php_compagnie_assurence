@@ -2,10 +2,10 @@
 function form_create()
 {
     $title = "Add driver";
-    $content = '<div>';
-    $content .= '<form method="POST" action="./create">';
+    $content = '<div class="form_container" >';
+    $content .= '<form class="form_create" method="POST" action="./create">';
 
-    $content .= '<div>';
+    $content .= '<div >';
     $content .= '<label for="nom" >Nom</label>';
     $content .= '<input type="text" id="nom" name="nom" required>';
     $content .= '</div>';
